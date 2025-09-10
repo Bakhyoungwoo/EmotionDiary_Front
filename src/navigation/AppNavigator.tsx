@@ -9,6 +9,7 @@ import HomeScreen from "../screens/Home/HomeScreen";
 import DiaryScreen from "../screens/Diary/DiaryScreen";
 import EmotionShapeScreen from "../screens/Diary/EmotionShapeScreen";
 import StartScreen from "../screens/Start/StartScreen"; 
+import ReportScreen from "../screens/Report/ReportScreen";
 
 export type RootStackParamList = {
   Start: undefined;
@@ -18,6 +19,7 @@ export type RootStackParamList = {
   Logout: undefined;
   Home: undefined;
   Diary: undefined;
+  Report: undefined;
   EmotionShape: { distribution: Record<string, number> };
 };
 
@@ -30,7 +32,7 @@ export default function AppNavigator() {
         <Stack.Screen
           name="Start"
           component={StartScreen}
-          options={{ headerShown: false }} // 상단 헤더 숨김
+          options={{ headerShown: false }} 
         />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
@@ -38,6 +40,7 @@ export default function AppNavigator() {
         <Stack.Screen name="Logout" component={LogoutScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Diary" component={DiaryScreen} />
+        <Stack.Screen name="Report" component={ReportScreen} />
         <Stack.Screen
           name="EmotionShape"
           component={EmotionShapeScreen}
