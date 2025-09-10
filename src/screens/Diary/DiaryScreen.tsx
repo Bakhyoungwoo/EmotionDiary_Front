@@ -64,7 +64,6 @@ export default function DiaryScreen() {
     console.log("📌 API 응답 데이터:", res.data);
 
     setResult(res.data);
-    setMsg("✅ 저장 및 분석 완료!");
     setText("");
   } catch (err: any) {
     console.error("Diary Save Error:", err.response?.data || err.message);
@@ -106,7 +105,6 @@ export default function DiaryScreen() {
         <View style={styles.resultBox}>
           <Text style={styles.resultTitle}>📊 감정 분석 결과</Text>
           <Text>감정: {result.emotion}</Text>
-          <Text>분류: {result.sentiment}</Text>
           <Text style={styles.quote}>💌 {result.message}</Text>
 
           {/* 👉 다음 버튼 (도형 시각화 화면으로 이동) */}
